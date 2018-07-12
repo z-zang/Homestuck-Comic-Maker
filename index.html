@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <!-- Required -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Homestuck Comic Maker</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+
+  <link rel="stylesheet" href="css/stylesheet.css" type="text/css">
+
+</head>
+
+<body>
+  <!-- INCLUDE header; title-->
+  <!-- <header w3-include-html="components/header.html"></header> -->
+
+  <!-- INCLUDE navbar-->
+  <nav class="grid-item nav navbar navbar-expand-lg navbar-light bg-light" w3-include-html="components/navbar.html">
+  </nav>
+
+<!--
+Grid layout:
+[Canvas] [Menu]
+-->
+
+<!-- Beginning of grid layout; 2 x 1-->
+  <div class="grid-container" id="container">
+
+  <!-- [canvas] -->
+    <!-- TODO: check if can separate canvas into html file -->
+
+    <section>
+      <canvas-nav>
+        <button class="btn btn-link" onclick="clearCanvas()">clear canvas</button>
+        <button class="btn btn-link" onclick="exportImg()">export image</button>
+      </canvas-nav>
+
+    <div class="wrapper grid-item">
+      <canvas id="canvas-bg">
+      </canvas>
+      <canvas id="c">
+      </canvas>
+    </div>
+
+    </section>
+
+  <!-- [menu] -->
+    <main class="grid-item">
+    <!-- tabbed box nav -->
+      <menu w3-include-html="components/menu.html">
+      </menu>
+      <!-- tabbed boxes-->
+      <div id="betakids" class="selection">
+          <!-- Character dropdowns -->
+          <section id="accordion">
+            <!-- TODO: Insert char sprites here, in grid form?-->
+            <!-- NOTE: buttons don't need onclick because event listener has already been added -->
+
+            <!-- JohnEgbert dropdown -->
+            <section class="JohnEgbert-sprites">
+              <div class="card">
+                  <h5 class="mb-0">
+                    <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                      John Egbert
+                    </button>
+                  </h5>
+
+                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                  <div class="card-body">
+
+                    <!-- Image buttons -->
+                    <button class="btnAdd" value="./sprites/character/John_Egbert.png"><img src="sprites/character/John_Egbert.png" class="small-char"></button>
+                    <button class="btnAdd" value="./sprites/character/John_Godtier.png"><img src="sprites/character/John_Godtier.png" class="small-char"></button>
+
+                  </div>
+                </div>
+              </div>
+          </section>
+
+            <!-- DaveStrider dropdown -->
+            <div class="card">
+
+                <h5 class="mb-0">
+                  <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    Dave Strider
+                  </button>
+                </h5>
+
+              <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                <div class="card-body">
+                  <button class="btnAdd" value="./sprites/character/Dave_Strider.png"><img src="sprites/character/Dave_Strider.png" class="small-char"></button>
+
+                  <button class="btnAdd" value="./sprites/character/Dream_Dave.png"><img src="sprites/character/Dream_Dave.png" class="small-char"></button>
+                </div>
+              </div>
+            </div>
+
+            <!-- character dropdown -->
+            <div class="card">
+                <h5 class="mb-0">
+                  <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    Char Name
+                  </button>
+                </h5>
+              <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                <div class="card-body">
+                  sample text
+                </div>
+              </div>
+            </div>
+          </section>
+        </section>
+
+      </div>
+
+      <div id="alphakids" class="selection" style="display:none">
+        <p>Alpha Kids</p>
+        <!-- TODO: Insert images here -->
+      </div>
+
+      <div id="trolls" class="selection" style="display:none">
+        <p>Pre-Scratch Trolls</p>
+        <!-- TODO: Insert images here -->
+      </div>
+
+      <div id="other" class="selection" style="display:none">
+        <p>Post-Scratch Trolls</p>
+        <!-- TODO: Insert images here -->
+      </div>
+
+      <div id="objs" class="selection" style="display:none">
+        <p>Objects</p>
+        <!-- TODO: Insert images here -->
+      </div>
+
+      <div id="bgs" class="selection" style="display:none">
+        <h3>Backgrounds</h3>
+        <!-- TODO: Insert images here -->
+        <button class="bgSet" value="./sprites/background/CanCity.png"><img src="sprites/background/CanCity.png" class="small-char"></button>
+        <button class="bgSet" value="./sprites/background/BecLab.jpg"><img src="sprites/background/BecLab.jpg" class="small-char"></button>
+        <button class="bgSet" value="./sprites/background/DirksRoom.png"><img src="sprites/background/DirksRoom.png" class="small-char"></button>
+        <button class="bgSet" value="./sprites/background/DavesRoom.png"><img src="sprites/background/DavesRoom.png" class="small-char"></button>
+      </div>
+
+      </div>
+  </main>
+  </div>
+
+  <script src="scripts/fabric.min.js"></script>
+  <script src="scripts/jquery-3.2.1.slim.min.js"></script>
+  <script src="scripts/popper.min.js"></script>
+  <script src="scripts/bootstrap.min.js"></script>
+  <script src="scripts/includeHTML.js"></script>
+  <script src="scripts/tabcontrol.js"></script>
+  <script src="scripts/bgcontrol.js"></script>
+  <script src="scripts/btnsetup.js"></script>
+  <script src="scripts/canvas.js"></script>
+</body>
+</html>
