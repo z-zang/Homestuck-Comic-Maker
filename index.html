@@ -32,10 +32,14 @@ Grid layout:
     <!-- TODO: check if can separate canvas into html file -->
 
     <section>
-      <canvas-nav>
+      <div class="canvas-nav">
         <button class="btn btn-link" onclick="clearCanvas()">clear canvas</button>
         <button class="btn btn-link" onclick="exportImg()">export image</button>
-      </canvas-nav>
+        <div class="slidecontainer">
+          <p>Canvas Zoom</p>
+          <input type="range" min="1" max="100" value="50">
+        </div>
+      </div>
 
     <div class="wrapper grid-item">
       <canvas id="canvas-bg">
@@ -51,7 +55,8 @@ Grid layout:
     <!-- tabbed box nav -->
       <menu w3-include-html="components/menu.html">
       </menu>
-      <!-- tabbed boxes-->
+
+      <!-- Beta Kids-->
       <div id="betakids" class="selection">
           <!-- Character dropdowns -->
           <section id="accordion">
@@ -59,25 +64,39 @@ Grid layout:
             <!-- NOTE: buttons don't need onclick because event listener has already been added -->
 
             <!-- JohnEgbert dropdown -->
-            <section class="JohnEgbert-sprites">
-              <div class="card">
-                  <h5 class="mb-0">
-                    <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                      John Egbert
-                    </button>
-                  </h5>
+            <div class="card">
+                <h5 class="mb-0">
+                  <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    John Egbert
+                  </button>
+                </h5>
 
-                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
-                  <div class="card-body">
+              <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                <div class="card-body">
 
-                    <!-- Image buttons -->
-                    <button class="btnAdd" value="./sprites/character/John_Egbert.png"><img src="sprites/character/John_Egbert.png" class="small-char"></button>
-                    <button class="btnAdd" value="./sprites/character/John_Godtier.png"><img src="sprites/character/John_Godtier.png" class="small-char"></button>
+                  <!-- Image buttons -->
+                  <button class="btnAdd" value="./sprites/betakids/John_Egbert.png"><img src="sprites/betakids/John_Egbert.png" class="small-char"></button>
+                  <button class="btnAdd" value="./sprites/betakids/John_Godtier.png"><img src="sprites/betakids/John_Godtier.png" class="small-char"></button>
 
-                  </div>
                 </div>
               </div>
-          </section>
+            </div>
+
+            <!-- character dropdown -->
+            <div class="card">
+                <h5 class="mb-0">
+                  <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    Rose Lalonde
+                  </button>
+                </h5>
+              <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                <div class="card-body">
+
+                  <button class="btnAdd" value="./sprites/betakids/Rose_Lalonde.png"><img src="sprites/betakids/Rose_Lalonde.png" class="small-char"></button>
+
+                </div>
+              </div>
+            </div>
 
             <!-- DaveStrider dropdown -->
             <div class="card">
@@ -90,9 +109,9 @@ Grid layout:
 
               <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
                 <div class="card-body">
-                  <button class="btnAdd" value="./sprites/character/Dave_Strider.png"><img src="sprites/character/Dave_Strider.png" class="small-char"></button>
+                  <button class="btnAdd" value="./sprites/betakids/Dave_Strider.png"><img src="sprites/betakids/Dave_Strider.png" class="small-char"></button>
 
-                  <button class="btnAdd" value="./sprites/character/Dream_Dave.png"><img src="sprites/character/Dream_Dave.png" class="small-char"></button>
+                  <button class="btnAdd" value="./sprites/betakids/Dream_Dave.png"><img src="sprites/betakids/Dream_Dave.png" class="small-char"></button>
                 </div>
               </div>
             </div>
@@ -110,11 +129,14 @@ Grid layout:
                 </div>
               </div>
             </div>
+
+            <!-- closing accordion -->
           </section>
         </section>
 
       </div>
 
+      <!-- Alpha Kids  -->
       <div id="alphakids" class="selection" style="display:none">
         <p>Alpha Kids</p>
         <!-- TODO: Insert images here -->
