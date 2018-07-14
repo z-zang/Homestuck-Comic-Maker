@@ -18,3 +18,8 @@ body {
   grid-template-columns: 650px auto;
   padding: 20px;
 }
+
+button{
+  background-color: white;
+  border: 0px;
+}

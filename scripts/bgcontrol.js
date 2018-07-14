@@ -18,6 +18,16 @@ function setBg(bgUrl) {
   document.getElementById("canvas-bg").style.backgroundImage = `url(${bgUrl})`;
 }
 
+// EXPERIMENTAL:
+// If custom file:
+function customBg(){
+  var file = document.getElementById("uploadBg").files[0];
+  var reader = new FileReader();
+  if (reader.onloadend) {
+    setBg(reader.result);
+  }
+}
+
 // Other canvas
 var zoomVal = document.getElementById("zoomControl")
 var cZoom = document.getElementById("cZoom")
