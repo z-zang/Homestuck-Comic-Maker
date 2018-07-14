@@ -14,17 +14,19 @@ function bgSetup() {
 }
 
 function setBg(bgUrl) {
-  console.log('working ' + bgUrl)
   document.getElementById("canvas-bg").style.backgroundImage = `url(${bgUrl})`;
 }
 
-// EXPERIMENTAL:
 // If custom file:
+document.getElementById('uploadBg').addEventListener('change', customBg, true);
 function customBg(){
   var file = document.getElementById("uploadBg").files[0];
   var reader = new FileReader();
-  if (reader.onloadend) {
-    setBg(reader.result);
+  reader.onloadend = function(){
+    document.getElementById('canvas-bg').style.backgroundImage = "url(" + reader.result + ")";
+  }
+  if (file) {
+    reader.readAsDataURL(file);
   }
 }
 

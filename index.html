@@ -22,25 +22,45 @@
   <div class="grid-container" id="container">
 
   <!-- [canvas] -->
-    <!-- TODO: check if can separate canvas into html file -->
-    <section name="canvas-controls">
+   <!-- Upper canvas controls -->
+    <section>
       <div class="canvas-nav">
         <button class="btn btn-link" onclick="delSelect()">delete selected</button>
         <button class="btn btn-link" onclick="clearCanvas()">clear canvas</button>
         <button class="btn btn-link" onclick="exportImg()">export image</button>
       </div>
 
-    <div class="wrapper grid-item">
-      <canvas id="canvas-bg">
-      </canvas>
-      <canvas id="c">
-      </canvas>
-    </div>
+      <!-- Both canvases -->
+      <section class="wrapper grid-item">
+        <canvas id="canvas-bg">
+        </canvas>
+        <canvas id="c">
+        </canvas>
+      </section>
 
-    <div class="slidecontainer">
-      <p id="cZoom">Canvas Zoom: 100%</p>
-      <input id="zoomControl" type="range" min="50" max="250" value="100" width="300">
-    </div>
+      <!-- Lower canvas controls -->
+      <section class="bg-adjust">
+        <div class="adjust-container">
+          <div>
+            <br>
+            <p id="cZoom">Background Zoom: 100%</p>
+            <input id="zoomControl" type="range" min="50" max="250" value="100">
+          </div>
+          <div>
+            <p>Pan Canvas</p>
+            <div class="canv-pan">
+              <br>
+              <button class="arrow">⇧</button>
+              <br>
+              <button class="arrow">⇦</button>
+              <br>
+              <button class="arrow">⇨</button>
+              <br>
+              <button class="arrow">⇩</button>
+            </div>
+          </div>
+        </div>
+      </section>
 
     </section>
 
@@ -198,13 +218,15 @@
       <div id="bgs" class="selection" style="display:none">
         <div>
           <p>Add custom background</p>
-          <input type="file" multiple="false" accept="image/" id="uploadBg" onchange="customBg()">
+          <input type="file" multiple="false" accept="image/" id="uploadBg">
         </div>
-        <!-- TODO: Insert images here -->
-        <button class="bgSet" value="./sprites/background/CanCity.png"><img src="sprites/background/CanCity.png" class="small-char"></button>
-        <button class="bgSet" value="./sprites/background/BecLab.jpg"><img src="sprites/background/BecLab.jpg" class="small-char"></button>
-        <button class="bgSet" value="./sprites/background/DirksRoom.png"><img src="sprites/background/DirksRoom.png" class="small-char"></button>
-        <button class="bgSet" value="./sprites/background/DavesRoom.png"><img src="sprites/background/DavesRoom.png" class="small-char"></button>
+        <div> <!-- BgImages-->
+          <!-- TODO: Insert images here -->
+          <button class="bgSet" value="./sprites/background/CanCity.png"><img src="sprites/background/CanCity.png" class="small-char"></button>
+          <button class="bgSet" value="./sprites/background/BecLab.jpg"><img src="sprites/background/BecLab.jpg" class="small-char"></button>
+          <button class="bgSet" value="./sprites/background/DirksRoom.png"><img src="sprites/background/DirksRoom.png" class="small-char"></button>
+          <button class="bgSet" value="./sprites/background/DavesRoom.png"><img src="sprites/background/DavesRoom.png" class="small-char"></button>
+        </div>
       </div>
 
       </div>

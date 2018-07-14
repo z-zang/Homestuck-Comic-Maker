@@ -1,6 +1,6 @@
 /* Canvas btns */
 #zoomControl{
-  width: 650px;
+  width: 90%;
 }
 
 /* Canvas (ratio is 13/9)*/
@@ -17,4 +17,24 @@ canvas{
   height: 450px;
   border: 1px black solid;
   position: absolute;
+}
+
+.canv-pan{
+  display: grid;
+  grid-template-rows: 30px 30px 30px;
+  grid-template-columns: 30px 30px 30px;
+}
+
+.arrow{
+  font-size: 20px;
+  background-color: lightgray;
+  padding-bottom: 10px; 
+}
+
+.adjust-container{
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: auto 90px;
+  padding: 10px;
+  padding-right: 20px;
 }

@@ -17,7 +17,6 @@ function clearCanvas() {
 // CANV1: adds image when button is clicked
 function addImg(val) {
     fabric.Image.fromURL(val, function(img) {
-    console.log('got value ' + val)
     img.set({
         left: Math.random() * 500,
         top: Math.random() * 300,
@@ -31,8 +30,6 @@ function addImg(val) {
 // Deleting images, either singular/as a group
 function delSelect(){
 	var activeObject = c.getActiveObject();
-  console.log(activeObject);
-  console.log(activeObject['_objects'])
   if (activeObject['_objects']) {
     activeObject['_objects'].map(x => c.remove(x));
   } else if (activeObject) {

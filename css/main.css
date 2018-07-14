@@ -16,10 +16,14 @@ body {
   display: grid;
   grid-template-rows: auto auto;
   grid-template-columns: 650px auto;
-  padding: 20px;
+  padding: 0px 20px;
 }
 
-button{
+.arrow{
   background-color: white;
   border: 0px;
+}
+
+p{
+  margin-bottom: 5px;
 }
