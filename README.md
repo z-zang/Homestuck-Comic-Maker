@@ -11,15 +11,18 @@ Layout and Features
 Current Functionality
 ------
 - Canvas buttons: clear canvas
+- Canvas buttons: add zoom option for background image
 - Canvas: using Fabric.js, can resize, rotate, and flip added images.
 - Sprite Menu: add character/object images by clicking on button of the sprite
 - Sprite Menu: set background by clicking on BG
+
 
 Planned Features
 ------
 - Navbar: Each link provides a relevant popup or opens in an external window
 - Canvas buttons: undo/redo actions, delete selected sprite
-- Canvas: add zoom option for background image
+- Canvas buttons: add export image option
+- Canvas: add panning controls
 - Canvas: allow for canvas resizing (with option for locking aspect ratio)
 - Canvas: add ability to add text as well
 - Sprite Menu: add more sprites for the other 100+ characters, backgrounds, and objects

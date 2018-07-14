@@ -7,38 +7,28 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Homestuck Comic Maker</title>
   <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
-
-  <link rel="stylesheet" href="css/stylesheet.css" type="text/css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/main.css" type="text/css">
+  <link rel="stylesheet" href="css/canvas.css" type="text/css">
+  <link rel="stylesheet" href="css/menu.css" type="text/css">
 
 </head>
 
 <body>
-  <!-- INCLUDE header; title-->
-  <!-- <header w3-include-html="components/header.html"></header> -->
-
   <!-- INCLUDE navbar-->
   <nav class="grid-item nav navbar navbar-expand-lg navbar-light bg-light" w3-include-html="components/navbar.html">
   </nav>
-
-<!--
-Grid layout:
-[Canvas] [Menu]
--->
 
 <!-- Beginning of grid layout; 2 x 1-->
   <div class="grid-container" id="container">
 
   <!-- [canvas] -->
     <!-- TODO: check if can separate canvas into html file -->
-
-    <section>
+    <section name="canvas-controls">
       <div class="canvas-nav">
+        <button class="btn btn-link" onclick="delSelect()">delete selected</button>
         <button class="btn btn-link" onclick="clearCanvas()">clear canvas</button>
         <button class="btn btn-link" onclick="exportImg()">export image</button>
-        <div class="slidecontainer">
-          <p>Canvas Zoom</p>
-          <input type="range" min="1" max="100" value="50">
-        </div>
       </div>
 
     <div class="wrapper grid-item">
@@ -46,6 +36,11 @@ Grid layout:
       </canvas>
       <canvas id="c">
       </canvas>
+    </div>
+
+    <div class="slidecontainer">
+      <p id="cZoom">Canvas Zoom: 100%</p>
+      <input id="zoomControl" type="range" min="50" max="250" value="100" width="300">
     </div>
 
     </section>
@@ -93,6 +88,8 @@ Grid layout:
                 <div class="card-body">
 
                   <button class="btnAdd" value="./sprites/betakids/Rose_Lalonde.png"><img src="sprites/betakids/Rose_Lalonde.png" class="small-char"></button>
+                  <button class="btnAdd" value="./sprites/betakids/Rose_GT.png"><img src="sprites/betakids/Rose_GT.png" class="small-char"></button>
+                  <button class="btnAdd" value="./sprites/betakids/Rose_Dark.png"><img src="sprites/betakids/Rose_Dark.png" class="small-char"></button>
 
                 </div>
               </div>
@@ -119,13 +116,13 @@ Grid layout:
             <!-- character dropdown -->
             <div class="card">
                 <h5 class="mb-0">
-                  <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                    Char Name
+                  <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                    Jade Harley
                   </button>
                 </h5>
-              <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+              <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
                 <div class="card-body">
-                  sample text
+                  <button class="btnAdd" value="./sprites/betakids/Jade_Harley.gif"><img src="sprites/betakids/Jade_Harley.gif" class="small-char"></button>
                 </div>
               </div>
             </div>
@@ -171,6 +168,7 @@ Grid layout:
   </div>
 
   <script src="scripts/fabric.min.js"></script>
+  <script src="scripts/html2canvas.min.js"></script>
   <script src="scripts/jquery-3.2.1.slim.min.js"></script>
   <script src="scripts/popper.min.js"></script>
   <script src="scripts/bootstrap.min.js"></script>
@@ -179,5 +177,6 @@ Grid layout:
   <script src="scripts/bgcontrol.js"></script>
   <script src="scripts/btnsetup.js"></script>
   <script src="scripts/canvas.js"></script>
+  <script src="scripts/export.js"></script>
 </body>
 </html>

@@ -1,0 +1,33 @@
+/* Main grid container section */
+main {
+  margin: 0px;
+  padding: 0px 20px;
+}
+
+/* Sprites Menu */
+menu{
+  margin: 0px;
+  padding: 0px;
+  /* border: 1px solid black; */
+  display: flex;
+  justify-content:space-between;
+}
+
+/* Main menu buttons */
+.menu-btn{
+  font-size: 14px;
+  margin: 0px
+  padding: 2px 5px;
+  border: 1px solid;
+  border-radius: 2px 2px 0px 0px;
+}
+
+.btn-active{
+  background-color: white;
+  border-bottom: 0px;
+}
+
+/* preview icon sizes */
+.small-char{
+  height: 80px;
+}

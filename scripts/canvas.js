@@ -1,9 +1,20 @@
-// Initial canvas setup
+// Initial canvases setup
+// Fabric Canvas
 var c = new fabric.Canvas('c');
 c.setHeight(450);
 c.setWidth(650);
 
-// adds image when button is clicked
+// Vanilla Canvas
+var bgCanvas = document.getElementById("canvas-bg");
+var bgCtx = bgCanvas.getContext('2d');
+
+// BOTH: clears canvas, sets bg to no url
+function clearCanvas() {
+  c.clear();
+  setBg(' ');
+}
+
+// CANV1: adds image when button is clicked
 function addImg(val) {
     fabric.Image.fromURL(val, function(img) {
     console.log('got value ' + val)
@@ -17,22 +28,14 @@ function addImg(val) {
   });
 }
 
-// clears canvas
-function clearCanvas() {
-  console.log('clearing')
-  c.clear();
-  setBg(' ')
+// Deleting images, either singular/as a group
+function delSelect(){
+	var activeObject = c.getActiveObject();
+  console.log(activeObject);
+  console.log(activeObject['_objects'])
+  if (activeObject['_objects']) {
+    activeObject['_objects'].map(x => c.remove(x));
+  } else if (activeObject) {
+    c.remove(activeObject);
+  }
 }
-
-function exportImg() {
-  var img = c.toDataURL("image/png");
-  var tab = window.open('about:blank','image from canvas');
-  tab.document.write(
-    '<div id="canvas-bg">'
-    +'<img src="'+img+'"/>'
-    +'</div>'
-  );
-
-}
-    // <div class="wrapper" style='background-image': url(${bgUrl})>
-    //     </div>

@@ -1,0 +1,20 @@
+/* Overall page */
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: scroll;
+  background-color: white;
+}
+
+/* Heading */
+.title-text{
+  text-align: center;
+}
+
+/* Grid system */
+.grid-container{
+  display: grid;
+  grid-template-rows: auto auto;
+  grid-template-columns: 650px auto;
+  padding: 20px;
+}
