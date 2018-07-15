@@ -1,4 +1,13 @@
 /* Overall page */
+@font-face {
+  font-family: 'TYPOSTUCK';
+  src: url('/fonts/TYPOSTUCK.ttf');
+}
+
+.typostuck{
+  font-family: 'TYPOSTUCK';
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -6,9 +15,21 @@ body {
   background-color: white;
 }
 
-/* Heading */
+p{
+  margin-bottom: 5px;
+}
+
 .title-text{
   text-align: center;
+  font-family: 'TYPOSTUCK';
+  font-size: 40px;
+  padding-bottom: 0px;
+}
+
+.navbar{
+  padding-top: 0px;
+  padding-bottom: 0px;
+  justify-content: space-between;
 }
 
 /* Grid system */
@@ -17,13 +38,4 @@ body {
   grid-template-rows: auto auto;
   grid-template-columns: 650px auto;
   padding: 0px 20px;
-}
-
-.arrow{
-  background-color: white;
-  border: 0px;
-}
-
-p{
-  margin-bottom: 5px;
 }

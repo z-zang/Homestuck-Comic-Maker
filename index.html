@@ -6,31 +6,42 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Homestuck Comic Maker</title>
+  <!-- Libraries/Fonts -->
   <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
   <!-- Custom CSS -->
   <link rel="stylesheet" href="css/main.css" type="text/css">
   <link rel="stylesheet" href="css/canvas.css" type="text/css">
   <link rel="stylesheet" href="css/menu.css" type="text/css">
+  <link rel="stylesheet" href="css/modal.css" type="text/css">
+
+  <!-- includehtml -->
+  <script src="scripts/includeHTML.js" async></script>
 </head>
 
 <body>
+  <!-- Popups -->
+  <div class="modal-popup" w3-include-html="components/modal.html">
+  </div>
+
   <!-- INCLUDE navbar-->
-  <nav class="grid-item nav navbar navbar-expand-lg navbar-light bg-light" w3-include-html="components/navbar.html">
+  <nav class="grid-item nav navbar navbar-expand-lg navbar-light bg-light navbar-expand" w3-include-html="components/navbar.html">
   </nav>
 
 <!-- Beginning of grid layout; 2 x 1-->
   <div class="grid-container" id="container">
 
-  <!-- [canvas] -->
-   <!-- Upper canvas controls -->
-    <section>
+  <!-- [canvas section] -->
+    <section class="grid-item">
+      <!-- Upper canvas controls -->
       <div class="canvas-nav">
+        <button class="btn btn-link" onclick="delSelect()">undo</button>
+        <button class="btn btn-link" onclick="delSelect()">redo</button>
         <button class="btn btn-link" onclick="delSelect()">delete selected</button>
         <button class="btn btn-link" onclick="clearCanvas()">clear canvas</button>
         <button class="btn btn-link" onclick="exportImg()">export image</button>
       </div>
 
-      <!-- Both canvases -->
+      <!-- Canvases -->
       <section class="wrapper grid-item">
         <canvas id="canvas-bg">
         </canvas>
@@ -50,13 +61,11 @@
             <p>Pan Canvas</p>
             <div class="canv-pan">
               <br>
-              <button class="arrow">⇧</button>
+              <button id="up" class="arrow"><p>⇧</p></button>
               <br>
-              <button class="arrow">⇦</button>
-              <br>
-              <button class="arrow">⇨</button>
-              <br>
-              <button class="arrow">⇩</button>
+              <button id="left" class="arrow"><p>⇦</p></button>
+              <button id="down" class="arrow"><p>⇩</p></button>
+              <button id="right" class="arrow"><p>⇨</p></button>
             </div>
           </div>
         </div>
@@ -66,7 +75,7 @@
 
   <!-- [menu] -->
     <main class="grid-item">
-    <!-- tabbed box nav -->
+      <!-- tabbed box nav -->
       <menu w3-include-html="components/menu.html">
       </menu>
 
@@ -190,7 +199,6 @@
 
             <!-- closing accordion -->
           </section>
-        </section>
 
       </div>
 
@@ -229,20 +237,22 @@
         </div>
       </div>
 
-      </div>
-  </main>
-  </div>
+    </main>
+  </div> <!-- end grid item2-->
 
+  <!-- libraries -->
   <script src="scripts/fabric.min.js"></script>
   <script src="scripts/html2canvas.min.js"></script>
   <script src="scripts/jquery-3.2.1.slim.min.js"></script>
   <script src="scripts/popper.min.js"></script>
   <script src="scripts/bootstrap.min.js"></script>
-  <script src="scripts/includeHTML.js"></script>
+  <!-- custom scripts -->
+  <script src="scripts/modal.js"></script>
   <script src="scripts/tabcontrol.js"></script>
   <script src="scripts/bgcontrol.js"></script>
   <script src="scripts/btnsetup.js"></script>
   <script src="scripts/canvas.js"></script>
+  <script src="scripts/canvaspan.js"></script>
   <script src="scripts/export.js"></script>
 </body>
 </html>

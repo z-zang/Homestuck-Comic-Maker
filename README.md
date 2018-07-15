@@ -2,20 +2,20 @@
 
 A comic panel maker using HTML5 canvas and image manipulation, featuring images and assets based off the webcomic Homestuck. Uses Bootstrap 4 and the Fabric.js library, but otherwise is written in vanilla JavaScript.
 
-Layout and Features
+Layout
 ------
 - Navbar: links to About, Instructions, Contact, and to code On github/Glitch
 - Canvas: two, one layer for sprites and another for the background images
-- Sprite Menu: is a tabbed info box, with each tab corresponding to a category of sprites. Furthermore, each tab has dropdowns grouping each characters' sprites together
+- Sprite Menu: is a tabbed box, with each tab corresponding to a category of sprites. Furthermore, each tab has dropdowns grouping each characters' sprites together
 
 Current Functionality
 ------
+- Navbar: Links to
+- Canvas: using Fabric.js, can resize, rotate, and flip added images.
 - Canvas buttons: clear canvas
 - Canvas buttons: add zoom option for background image
-- Canvas: using Fabric.js, can resize, rotate, and flip added images.
 - Sprite Menu: add character/object images by clicking on button of the sprite
-- Sprite Menu: set background by clicking on BG
-
+- Sprite Menu: set background by clicking on BG, or add custom image file
 
 Planned Features
 ------

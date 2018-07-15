@@ -1,7 +1,8 @@
 /* Main grid container section */
 main {
   margin: 0px;
-  padding: 0px 20px;
+  padding-left: 20px;
+  padding-top: 12px;
 }
 
 /* Sprites Menu */
@@ -18,16 +19,17 @@ menu{
   font-size: 14px;
   margin: 0px
   padding: 2px 5px;
-  border: 1px solid;
-  border-radius: 2px 2px 0px 0px;
-}
-
-.btn-active{
-  background-color: white;
-  border-bottom: 0px;
+  border: 1px rgba(0, 0, 0, 0.125) solid;
+  border-radius: .25rem .25rem 0px 0px;
 }
 
 /* preview icon sizes */
 .small-char{
   height: 80px;
+}
+
+/* set color/border for all sprite buttons inside card-body */
+.card-body > button {
+  background-color: white;
+  border: 0px;
 }

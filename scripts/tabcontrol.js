@@ -1,5 +1,4 @@
 function show(sectionName) {
-
   // making sections visible
   var menuSections = document.getElementsByClassName("selection");
   for (var i = 0; i < menuSections.length; i++) {
@@ -13,7 +12,7 @@ function show(sectionName) {
 
   for (var x = 0; x < menuBtns.length; x++) {
       menuBtns[x].style.backgroundColor = "buttonface";
-      menuBtns[x].style.borderBottom = "black 1px solid";
+      menuBtns[x].style.borderBottom = "rgba(0, 0, 0, 0.125) 1px solid";
   }
   menuBtn.style.backgroundColor = "white";
   menuBtn.style.borderBottom = "white";
