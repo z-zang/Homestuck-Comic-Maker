@@ -1,7 +1,7 @@
 /* Overall page */
 @font-face {
   font-family: 'TYPOSTUCK';
-  src: url('/fonts/TYPOSTUCK.ttf');
+  src: url('fonts/TYPOSTUCK.ttf');
 }
 
 .typostuck{
