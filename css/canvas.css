@@ -12,6 +12,7 @@
 #canvas-bg{
   width: 650px;
   height: 450px;
+  background-position: center;
   background-repeat: no-repeat;
   background-size: 100%;
 }
