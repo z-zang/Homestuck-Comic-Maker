@@ -1,0 +1,22 @@
+.title-text{
+  text-align: center;
+  color: "green";
+  font-family: 'TYPOSTUCK';
+  font-size: 40px;
+  padding-bottom: 0px;
+}
+
+.navbar{
+  padding-top: 0px;
+  padding-bottom: 0px;
+  justify-content: space-between;
+  background-color: #535353;
+}
+
+.navbar > a{
+  
+}
+
+.title-img{
+  margin: 15px 10px;
+}

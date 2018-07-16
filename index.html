@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
   <!-- Custom CSS -->
   <link rel="stylesheet" href="css/main.css" type="text/css">
+  <link rel="stylesheet" href="css/navbar.css" type="text/css">
   <link rel="stylesheet" href="css/canvas.css" type="text/css">
   <link rel="stylesheet" href="css/menu.css" type="text/css">
   <link rel="stylesheet" href="css/modal.css" type="text/css">
@@ -24,7 +25,7 @@
   </div>
 
   <!-- INCLUDE navbar-->
-  <nav class="grid-item nav navbar navbar-expand-lg navbar-light bg-light navbar-expand" w3-include-html="components/navbar.html">
+  <nav class="grid-item navbar-dark navbar navbar-expand-lg navbar-expand" w3-include-html="components/navbar.html">
   </nav>
 
 <!-- Beginning of grid layout; 2 x 1-->
@@ -34,8 +35,8 @@
     <section class="grid-item">
       <!-- Upper canvas controls -->
       <div class="canvas-nav">
-        <button class="btn btn-link" onclick="delSelect()">undo</button>
-        <button class="btn btn-link" onclick="delSelect()">redo</button>
+        <button id="undo" class="btn btn-link">undo</button>
+        <button id="redo" class="btn btn-link">redo</button>
         <button class="btn btn-link" onclick="delSelect()">delete selected</button>
         <button class="btn btn-link" onclick="clearCanvas()">clear canvas</button>
         <button class="btn btn-link" onclick="exportImg()">export image</button>
@@ -85,7 +86,7 @@
           <section id="accordion">
 
             <!-- JohnEgbert dropdown -->
-            <div class="card">
+            <div class="card top-card">
                 <h5 class="mb-0">
                   <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                     John Egbert
@@ -252,6 +253,7 @@
   <script src="scripts/bgcontrol.js"></script>
   <script src="scripts/btnsetup.js"></script>
   <script src="scripts/canvas.js"></script>
+  <script src="scripts/undo-redo.js"></script>
   <script src="scripts/canvaspan.js"></script>
   <script src="scripts/export.js"></script>
 </body>
