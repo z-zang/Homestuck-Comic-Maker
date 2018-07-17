@@ -9,6 +9,10 @@
   font-family: 'TYPOSTUCK';
 }
 
+html{
+  max-width: 100vw;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -23,7 +27,7 @@ p{
 /* Grid system */
 .grid-container{
   display: grid;
-  grid-template-rows: auto auto;
+  grid-template-rows: auto;
   grid-template-columns: 650px auto;
   padding: 0px 20px;
 }

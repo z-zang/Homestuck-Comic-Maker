@@ -3,7 +3,7 @@
 <head>
   <!-- Required -->
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Homestuck Comic Maker</title>
   <!-- Libraries/Fonts -->
@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="css/canvas.css" type="text/css">
   <link rel="stylesheet" href="css/menu.css" type="text/css">
   <link rel="stylesheet" href="css/modal.css" type="text/css">
+  <link rel="stylesheet" href="css/mediaquery.css" type="text/css">
 
   <!-- includehtml -->
   <script src="scripts/includeHTML.js" async></script>
@@ -23,7 +24,7 @@
   <!-- Popups -->
   <div class="modal-popup" w3-include-html="components/modal.html">
   </div>
-  
+
   <!-- INCLUDE navbar-->
   <nav class="grid-item navbar-dark navbar navbar-expand-lg navbar-expand" w3-include-html="components/navbar.html">
   </nav>
@@ -81,7 +82,7 @@
       </menu>
 
       <!-- Beta Kids-->
-      <div id="betakids" class="selection">
+      <div id="kids" class="selection">
           <!-- Character dropdowns -->
           <section id="accordion">
 
@@ -201,12 +202,6 @@
             <!-- closing accordion -->
           </section>
 
-      </div>
-
-      <!-- Alpha Kids  -->
-      <div id="alphakids" class="selection" style="display:none">
-        <p>Alpha Kids</p>
-        <!-- TODO: Insert images here -->
       </div>
 
       <div id="trolls" class="selection" style="display:none">

@@ -14,7 +14,7 @@
   background-color: #535353;
   box-shadow: 0px 0px 5px 4px #303030;
   margin-bottom: 10px;
-  width: 100%;
+  max-width: 100%;
 }
 
 .navbar-dark .navbar-nav .nav-link:not(hover){

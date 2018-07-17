@@ -1,6 +1,17 @@
-/* @media query (max-width: 1068){
-  .media-alert{
-    visibility: visible;
-    z-index: 10;
+@media only screen and (max-width: 970px) {
+  .grid-container{
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: 650px;
+    padding: auto;
+    justify-content: space-around;
   }
-} */
+
+  .grid-item{
+    width: 100%
+  }
+
+  .title-text{
+    font-size: 40px;
+  }
+}
