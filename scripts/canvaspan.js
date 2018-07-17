@@ -59,26 +59,38 @@ window.addEventListener("keydown", function(e) {
 }, false);
 
 window.addEventListener('keydown', keyboardPan);
+window.addEventListener('keyup', btnDefault)
+
 function keyboardPan(e) {
   var cBg = document.getElementById('canvas-bg').style;
-
   var KeyID = event.keyCode;
   switch(KeyID) {
     case 37:
+      $("#left").addClass("arrow-active")
       x+=5;
       cBg.backgroundPositionX = x+'px';
     break;
     case 38:
+      $("#up").addClass("arrow-active")
       y+=5;
       cBg.backgroundPositionY = y+'px';
     break
     case 39:
+      $("#right").addClass("arrow-active")
       x-=5;
       cBg.backgroundPositionX = x+'px';
     break;
     case 40:
+      $("#down").addClass("arrow-active")
       y-=5;
       cBg.backgroundPositionY = y+'px';
     break;
   }
+}
+
+function btnDefault() {
+  $("#left").removeClass("arrow-active");
+  $("#up").removeClass("arrow-active");
+  $("#right").removeClass("arrow-active");
+  $("#down").removeClass("arrow-active");
 }

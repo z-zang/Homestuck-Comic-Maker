@@ -10,7 +10,7 @@ Layout
 
 Current Functionality
 ------
-- Navbar: Links to GitHub repo.
+- - Navbar: Each link provides a relevant popup or opens in an external window.
 - Canvas: Using Fabric.js, can resize, rotate, and flip added images.
 - Canvas buttons: Option to delete selected sprites, undo/redo actions, and clear canvas.
 - Canvas controls: Pan and resize for background image.
@@ -18,7 +18,6 @@ Current Functionality
 
 Planned Features
 ------
-- Navbar: Each link provides a relevant popup or opens in an external window
-- Canvas buttons: add export image option
+- Canvas buttons: add functionality to export image option
 - Canvas: add ability to add text as well
 - Sprite Menu: add more sprites for the other 100+ characters, backgrounds, and objects

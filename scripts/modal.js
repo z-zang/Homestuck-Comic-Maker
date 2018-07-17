@@ -5,11 +5,30 @@ var modal = document.getElementsByClassName('modal-popup')['0'];
 // TODO: customize which carousel image displays
 function displayModal(){
   modal.style.display = "block";
+  var id = event.target.getAttribute('id');
+  switch (id) {
+    case 'about':
+      console.log('about')
+      $( "#about" ).trigger("click");
+      break;
+    case 'instructions':
+      console.log('instructions')
+      $( "#instructions" ).trigger("click");
+      break;
+    case 'contact':
+      $( "#contact" ).trigger("click");
+      console.log('contact')
+      break;
+    case 'credit':
+      $( "#contact" ).trigger("click");
+      console.log('contact')
+      break;
+  }
+
 }
 
 // close modal by clicking span
 function closeModal() {
-  console.log('firing');
   modal.style.display = "none";
 }
 
