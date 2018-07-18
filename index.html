@@ -3,7 +3,7 @@
 <head>
   <!-- Required -->
   <meta charset="UTF-8">
-  <meta name="viewport" content="initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Homestuck Comic Maker</title>
   <!-- Libraries/Fonts -->
@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="css/navbar.css" type="text/css">
   <link rel="stylesheet" href="css/canvas.css" type="text/css">
   <link rel="stylesheet" href="css/menu.css" type="text/css">
-  <link rel="stylesheet" href="css/modal.css" type="text/css">
+  <link rel="stylesheet" href="css/popup.css" type="text/css">
   <link rel="stylesheet" href="css/mediaquery.css" type="text/css">
 
   <!-- includehtml -->
@@ -22,12 +22,17 @@
 
 <body>
   <!-- Popups -->
-  <div class="modal-popup" w3-include-html="components/modal.html">
+  <div id="modal-popup" w3-include-html="components/modal.html">
+  </div>
+  <div id="mobile-popup" w3-include-html="components/mobile.html">
   </div>
 
   <!-- INCLUDE navbar-->
-  <nav class="grid-item navbar-dark navbar navbar-expand-lg navbar-expand" w3-include-html="components/navbar.html">
+  <nav id="navbar" class="grid-item navbar-dark navbar navbar-expand-lg" w3-include-html="components/navbar.html">
   </nav>
+  <!-- <nav class=" navbar-dark navbar navbar-expand-lg" w3-include-html="components/navbar2.html">
+  </nav> -->
+
 
 <!-- Beginning of grid layout; 2 x 1-->
   <div class="grid-container" id="container">
@@ -78,7 +83,7 @@
   <!-- [menu] -->
     <main class="grid-item">
       <!-- tabbed box nav -->
-      <menu w3-include-html="components/menu.html">
+      <menu class="menu-container" w3-include-html="components/menu.html">
       </menu>
 
       <!-- Beta Kids-->
@@ -214,7 +219,7 @@
         <!-- TODO: Insert images here -->
       </div>
 
-      <div id="objs" class="selection" style="display:none">
+      <div id="misc" class="selection" style="display:none">
         <p>Objects</p>
         <!-- TODO: Insert images here -->
       </div>
@@ -243,7 +248,8 @@
   <script src="scripts/popper.min.js"></script>
   <script src="scripts/bootstrap.min.js"></script>
   <!-- custom scripts -->
-  <script src="scripts/modal.js"></script>
+  <script src="scripts/cookie.js"></script>
+  <script src="scripts/popup.js"></script>
   <script src="scripts/tabcontrol.js"></script>
   <script src="scripts/bgcontrol.js"></script>
   <script src="scripts/btnsetup.js"></script>

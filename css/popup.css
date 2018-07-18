@@ -1,0 +1,83 @@
+/* for popups */
+#modal-popup, #mobile-popup{
+  display: none;
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+  margin: auto;
+}
+
+.modal-content{
+  background-color: #fefefe;
+  margin: auto; /* 15% from the top and centered */
+  border: 1px solid darkgray;
+  width: fit-content;
+  height: fit-content;
+  box-shadow: 0px 0px 10px 1px #5E8A51;
+  /* vertical centering */
+  top: 50%;
+  transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+}
+
+/* bottom of modal */
+
+.close-modal{
+  padding: 0px 10px;
+  text-align: right;
+}
+
+.close {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* For mobile */
+.wrapper{
+  display: block;
+  overflow: auto;
+}
+
+.mobile-content{
+  padding: 15px;
+  background-color: white;
+  margin: 10vw;
+  margin-top: 70px;
+  margin-bottom: 10px;
+  max-width: 80vw;
+}
+
+.hal-text{
+  font-family: "Courier New";
+  font-weight: bold;
+  color: #E00707;
+}
+
+.hs, .hs:hover{
+  font-family: "Verdana";
+  color: #0000ee;
+}
+
+.hs:hover{
+  cursor: pointer;
+}
+
+.cookie-check{
+  text-align: center;
+}

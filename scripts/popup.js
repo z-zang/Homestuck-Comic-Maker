@@ -1,8 +1,7 @@
 // Get the modal
-var modal = document.getElementsByClassName('modal-popup')['0'];
+var modal = document.getElementById('modal-popup');
 
 //display modal when clicking select navbar buttons
-// TODO: customize which carousel image displays
 function displayModal(){
   modal.style.display = "block";
   var id = event.target.getAttribute('id');
@@ -17,14 +16,11 @@ function displayModal(){
       break;
     case 'contact':
       $( "#contact" ).trigger("click");
-      console.log('contact')
       break;
     case 'credit':
       $( "#contact" ).trigger("click");
-      console.log('contact')
       break;
   }
-
 }
 
 // close modal by clicking span
@@ -34,9 +30,34 @@ function closeModal() {
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
+  if (event.target == modal) {
+    checkInstruct();
+    console.log('checked')
+    modal.style.display = "none";
+  }
 }
 
 $('#myCarousel').carousel({});
+
+// mobile popup
+if ($(window).width() < 680) { // if smaller than 680px
+  getCookies();
+  if (mobileCookie != 'true') {
+    $('#mobile-popup').css("display", "block");
+  }
+} else { // if bigger than 680px
+  getCookies();
+  if (instructCookie != 'true') {
+    $('#modal-popup').css("display", "block");
+    document.getElementById('instructHide').style.display = "block";
+  }
+}
+
+// if mobile is open
+function toModal() {
+  checkCheckbox();
+  $('#mobile-popup').css("display", "none");
+  if (instructCookie != 'true') {
+    $('#modal-popup').css("display", "block");
+  }
+}

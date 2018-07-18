@@ -3,6 +3,7 @@ main {
   margin: 0px;
   padding-left: 20px;
   padding-top: 12px;
+  margin-bottom: 20px;
 }
 
 /* Sprites Menu */
@@ -11,6 +12,15 @@ menu{
   padding: 0px;
   display: flex;
   justify-content:space-between;
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+/* buttons inside menu */
+menu > button{
+  margin-right: 2px;
+  padding: 3px;
 }
 
 /* Main menu buttons */
