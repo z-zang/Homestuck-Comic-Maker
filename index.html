@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="css/navbar.css" type="text/css">
   <link rel="stylesheet" href="css/canvas.css" type="text/css">
   <link rel="stylesheet" href="css/menu.css" type="text/css">
+  <link rel="stylesheet" href="css/spectrum.css" type="text/css">
   <link rel="stylesheet" href="css/popup.css" type="text/css">
   <link rel="stylesheet" href="css/mediaquery.css" type="text/css">
 
@@ -61,24 +62,12 @@
           <div>
             <p id="cZoom">Background Zoom: 100%</p>
             <input id="zoomControl" type="range" min="50" max="250" value="100">
-            <p>Add Text <sup><a href="#" class="tooltip-outer" data-html="true" data-toggle="tooltip"
-              title="GhostKid: Sburb font&#013;
-              Rapscallion: Act loading&#013;
-              "
-              >[font guide]</a></sup></p>
+            <p>Add Text</p>
 
-            <input type="text" id="textbox" name="textbox" placeholder="input text here" value="test">
+            <input type="text" id="textbox" name="textbox" placeholder="input text here">
             <select id="textdiv"></select>
-            <button class="btn btn-basic btn-sm" onclick="addText()">Add Text</button>
-
-            <!-- old -->
-            <!-- <select name="" id="fontfamily">
-              <option value="ComicSans">Comic Sans</option>
-              <option value="CourierNew">Courier New</option>
-              <option value="GhostKidAoe">GhostKid Aoe</option>
-              <option value="TrollType1">TrollType v1</option>
-              <option value="TrollType2">TrollType v2</option>
-            </select> -->
+            <input type='text' id="showPaletteOnly"/>
+            <button class="btn btn-secondary btn-sm" onclick="addText()">Add Text</button>
           </div>
           <div>
             <p>Pan Background</p>
@@ -618,6 +607,8 @@
   <script src="scripts/tabcontrol.js"></script>
   <script src="scripts/bgcontrol.js"></script>
   <script src="scripts/btnsetup.js"></script>
+  <script src="scripts/spectrum.js"></script>
+  <script src="scripts/colourpicker.js"></script>
   <script src="scripts/fontfaceobserver.js"></script>
   <script src="scripts/canvas.js"></script>
   <script src="scripts/undo-redo.js"></script>

@@ -4,7 +4,7 @@
 }
 
 @font-face {
-  font-family: "TrollType V1";
+  font-family: "TrollType";
   src: url('../fonts/alternian.ttf');
 }
 
@@ -21,4 +21,34 @@
 @font-face {
   font-family: "Comic Sans MS";
   src: url('../fonts/comicsans.TTF');
+}
+
+@font-face {
+  font-family: "John handwriting";
+  src: url('../fonts/John.ttf');
+}
+
+@font-face {
+  font-family: "Rose handwriting";
+  src: url('../fonts/Rose.ttf');
+}
+
+@font-face {
+  font-family: "Dave handwriting";
+  src: url('../fonts/Dave.ttf');
+}
+
+@font-face {
+  font-family: "Jade handwriting";
+  src: url('../fonts/Jade.ttf');
+}
+
+@font-face {
+  font-family: "Dirk handwriting";
+  src: url('../fonts/Dirk.ttf');
+}
+
+@font-face {
+  font-family: "Jake handwriting";
+  src: url('../fonts/Jake.ttf');
 }

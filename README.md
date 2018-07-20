@@ -13,12 +13,12 @@ Current Functionality
 - Navbar: Each link provides a relevant popup or opens in an external window.
 - Canvas: Using Fabric.js, can resize, rotate, and flip added images.
 - Canvas buttons: Option to delete selected sprites, undo/redo actions, and clear canvas.
-- Canvas controls: Pan and resize for background image.
+- Canvas controls: Pan and resize for background image, as well as adding custom text.
 - Sprite Menu: Add character/object images by clicking on button of the sprite. Set background by clicking on BG button, or upload custom image file.
 - Popups: Will show instructions on first visit, and will show a warning on mobile.
 
-Planned Features
+To do:
 ------
 - Canvas buttons: add functionality to export image option
-- Canvas: add ability to add text as well
+- Complete about/instructions popup.
 - Sprite Menu: add more sprites for the other 100+ characters, backgrounds, and objects

@@ -7,7 +7,9 @@ $('#myTooltip').tooltip();
 
 //get text from input
 var inputText = document.getElementById('textbox').value
-var fonts = ["Courier New Bold", "Comic Sans MS", "TrollType V1", "TrollType V2", "Typostuck"];
+var fonts = ["Courier New Bold", "Comic Sans MS", "TrollType", "TrollType V2", "Typostuck", "John handwriting", "Rose handwriting", "Dave handwriting", "Jade handwriting", "Dirk handwriting", "Jake handwriting"];
+var font = fonts[0];
+loadFont(font);
 // "GhostKid"
 
 function addText() {
@@ -17,8 +19,11 @@ function addText() {
     top: 50,
     width: 150,
     fontSize: 20,
+    fontFamily: font,
+    fill: fontColor
   });
-  c.add(textbox).setActiveObject(textbox);
+  c.add(textbox).set("fontFamily", font);
+  document.getElementById('textbox').value = '';
 }
 
 // Populate the fontFamily select
@@ -27,30 +32,24 @@ fonts.forEach(function(font) {
   var option = document.createElement('option');
   option.innerHTML = font;
   option.value = font;
+  option.style.fontFamily = font;
   select.appendChild(option);
 });
 
-// Apply selected font on change
+// switching fonts
 document.getElementById('textdiv').onchange = function() {
-  if (this.value !== 'Courier New Bold') {
-    loadAndUse(this.value);
-  } else {
-    c.getActiveObject().set("fontFamily", this.value);
-    c.requestRenderAll();
-  }
+  font = this.value;
+  console.log(font);
+  loadFont(this.value);
 };
 
-// switching fonts of a selected object
-function loadAndUse(font) {
-  var myfont = new FontFaceObserver(font)
-  myfont.load()
-    .then(function() {
-      // when font is loaded, use it.
-      c.getActiveObject().set("fontFamily", font);
-      c.requestRenderAll();
-    }).catch(function(e) {
-      console.log(e)
-      console.warn('font loading failed ' + font);
 
-    });
+// load font
+function loadFont(font) {
+  var loadedFont = new FontFaceObserver(font);
+  loadedFont.load()
+  .catch(function(e) {
+    console.log(e)
+    console.warn('font loading failed ' + font);
+  });
 }

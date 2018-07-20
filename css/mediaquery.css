@@ -26,10 +26,10 @@
   }
 }
 
-@media only screen and (min-width: 850px) {
+@media only screen and (min-width: 992px) {
   .navbar-collapse{
-    display: -webkit-flex; /* Safari */
-    -webkit-flex-direction: row-reverse; /* Safari 6.1+ */
+    display: -webkit-flex;
+    -webkit-flex-direction: row-reverse;
     display: flex;
     flex-direction: row-reverse;
   }

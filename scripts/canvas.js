@@ -12,6 +12,8 @@ var bgCtx = bgCanvas.getContext('2d');
 function clearCanvas() {
   c.clear();
   setBg(' ');
+  document.getElementById("canvas-bg").style.backgroundSize = '100%'
+  document.getElementById('canvas-bg').style.backgroundPosition = '0px 0px'
 }
 
 // CANV1: adds image when button is clicked
