@@ -24,7 +24,12 @@ canvas{
   padding: 1px;
 }
 
+/* Text input */
+.tooltip {
+}
+
 .canv-pan{
+  margin-top: 15px;
   display: grid;
   grid-template-rows: 40px 40px;
   grid-template-columns: 40px 40px 40px;

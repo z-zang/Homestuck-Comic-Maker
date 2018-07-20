@@ -1,0 +1,24 @@
+@font-face {
+  font-family: 'Typostuck';
+  src: url('../fonts/TYPOSTUCK.ttf');
+}
+
+@font-face {
+  font-family: "TrollType V1";
+  src: url('../fonts/alternian.ttf');
+}
+
+@font-face {
+  font-family: "TrollType V2";
+  src: url('../fonts/trolltype.ttf');
+}
+
+@font-face {
+  font-family: "Courier New Bold";
+  src: url('../fonts/CourierNB.ttf');
+}
+
+@font-face {
+  font-family: "Comic Sans MS";
+  src: url('../fonts/comicsans.TTF');
+}
