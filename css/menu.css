@@ -14,13 +14,17 @@ menu{
   justify-content:space-between;
   display: grid;
   grid-template-rows: auto;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  /* bg version */
+  /* grid-template-columns: 1fr 1fr 1fr 1fr 1fr; */
+  /* no bg */
+  grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
 /* buttons inside menu */
 menu > button{
   margin-right: 2px;
   padding: 3px;
+  cursor: pointer;
 }
 
 /* Main menu buttons */
@@ -35,6 +39,7 @@ menu > button{
 /* preview icon sizes */
 .small-char{
   height: 70px;
+  cursor: pointer;
 }
 
 /* set color/border for all sprite buttons inside card-body */

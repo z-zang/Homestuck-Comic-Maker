@@ -1,11 +1,25 @@
 /* Canvas nav */
 .canvas-nav{
-  display: block;
+  margin-top: 5px;
+  display: grid;
+  grid-template-columns: repeat(7, auto) ;
+  max-width: 650px;
+}
+
+.canvas-btn{
+  padding: 4px 0px;
+}
+
+.canvas-icon{
+  margin-right: 8px;
+  margin-bottom: 2px;
+  height: 16px;
 }
 
 /* Canvas btns */
 #zoomControl{
   width: 90%;
+  cursor: pointer;
 }
 
 /* Canvas (ratio is 13/9)*/
@@ -24,9 +38,12 @@ canvas{
   padding: 1px;
 }
 
-/* Text input */
-.tooltip {
+/* palette */
+
+.sp-replacer{
+  top: -10px;
 }
+
 
 .canv-pan{
   margin-top: 15px;
@@ -44,11 +61,13 @@ canvas{
   width: 95%;
   height: 90%;
   box-shadow: 0px 0px 3px 1px gray;
+  cursor: pointer;
 }
 
 /* centering arrows inside buttons */
 .arrow > p{
   margin-top: -3px;
+  cursor: pointer;
 }
 
 /* active arrows */

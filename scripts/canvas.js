@@ -1,8 +1,14 @@
 // Initial canvases setup
 // Fabric Canvas
-var c = new fabric.Canvas('c');
+var c = new fabric.Canvas('c'
+, {
+  preserveObjectStacking: true
+}
+
+);
 c.setHeight(450);
 c.setWidth(650);
+c.getContext('2d');
 
 // Vanilla Canvas
 var bgCanvas = document.getElementById("canvas-bg");
@@ -37,4 +43,15 @@ function delSelect(){
   } else if (activeObject) {
     c.remove(activeObject);
   }
+}
+
+// forwards/backward
+function sendForward() {
+  var selectedObject = c.getActiveObject();
+  c.bringForward(selectedObject);
+}
+
+var sendBackward = function() {
+  var selectedObject = c.getActiveObject();
+  c.sendBackwards(selectedObject);
 }

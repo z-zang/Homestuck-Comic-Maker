@@ -2,7 +2,7 @@
 #modal-popup, #mobile-popup{
   display: none;
   position: fixed;
-  z-index: 10;
+  z-index: 2000;
   left: 0;
   top: 0;
   width: 100%;
@@ -29,8 +29,29 @@
   -o-transform: translateY(-50%);
 }
 
-/* bottom of modal */
+.carousel-caption {
+  top: 20px;
+  /* vertical centering */
+  top: 50%;
+  transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  bottom: auto;
+  text-align: left;
+}
+/* individual carousel card stylings */
+.green{
+  color: #73E94E;
+  text-decoration: underline;
+}
 
+.green:hover{
+  color: #C9E996;
+}
+
+/* bottom of modal */
 .close-modal{
   padding: 0px 10px;
   text-align: right;

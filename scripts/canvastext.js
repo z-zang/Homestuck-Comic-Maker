@@ -39,7 +39,6 @@ fonts.forEach(function(font) {
 // switching fonts
 document.getElementById('textdiv').onchange = function() {
   font = this.value;
-  console.log(font);
   loadFont(this.value);
 };
 

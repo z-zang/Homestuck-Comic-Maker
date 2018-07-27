@@ -53,7 +53,7 @@ function callEvent(value) {
 
 // Keyboard setup
 window.addEventListener("keydown", function(e) {
-    if([37, 38, 39, 40].indexOf(e.keyCode) > -1) {
+    if([38, 40, 46].indexOf(e.keyCode) > -1) {
         e.preventDefault();
     }
 }, false);
@@ -64,27 +64,34 @@ window.addEventListener('keyup', btnDefault)
 function keyboardPan(e) {
   var cBg = document.getElementById('canvas-bg').style;
   var KeyID = event.keyCode;
-  switch(KeyID) {
-    case 37:
-      $("#left").addClass("arrow-active")
-      x+=5;
-      cBg.backgroundPositionX = x+'px';
-    break;
-    case 38:
-      $("#up").addClass("arrow-active")
-      y+=5;
-      cBg.backgroundPositionY = y+'px';
-    break
-    case 39:
-      $("#right").addClass("arrow-active")
-      x-=5;
-      cBg.backgroundPositionX = x+'px';
-    break;
-    case 40:
-      $("#down").addClass("arrow-active")
-      y-=5;
-      cBg.backgroundPositionY = y+'px';
-    break;
+  var selected = document.activeElement
+
+  if (selected.id != "textbox") {
+    switch(KeyID) {
+      case 37:
+        $("#left").addClass("arrow-active")
+        x+=5;
+        cBg.backgroundPositionX = x+'px';
+      break;
+      case 38:
+        $("#up").addClass("arrow-active")
+        y+=5;
+        cBg.backgroundPositionY = y+'px';
+      break
+      case 39:
+        $("#right").addClass("arrow-active")
+        x-=5;
+        cBg.backgroundPositionX = x+'px';
+      break;
+      case 40:
+        $("#down").addClass("arrow-active")
+        y-=5;
+        cBg.backgroundPositionY = y+'px';
+      break;
+      case 46:
+        delSelect();
+      break;
+    }
   }
 }
 

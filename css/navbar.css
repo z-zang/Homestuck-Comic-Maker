@@ -33,6 +33,7 @@
 }
 .navbar-dark .navbar-nav .nav-link:hover{
   color: white;
+  cursor: pointer;
 }
 
 .title-img{

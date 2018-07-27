@@ -18,7 +18,7 @@ function displayModal(){
       $( "#contact" ).trigger("click");
       break;
     case 'credit':
-      $( "#contact" ).trigger("click");
+      $( "#credit" ).trigger("click");
       break;
   }
 }

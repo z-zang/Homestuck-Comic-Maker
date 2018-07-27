@@ -43,12 +43,15 @@
     <section class="grid-item">
       <!-- Upper canvas controls -->
       <div class="canvas-nav">
-        <button id="undo" class="btn btn-link">undo</button>
-        <button id="redo" class="btn btn-link">redo</button>
-        <button class="btn btn-link" onclick="delSelect()">delete selected</button>
-        <button class="btn btn-link" onclick="clearCanvas()">clear canvas</button>
-        <button class="btn btn-link" onclick="exportImg()">export image</button>
+        <button id="undo" class="btn btn-link canvas-btn"><img src="imgs/undo.svg" class="canvas-icon">undo</button>
+        <button id="redo" class="btn btn-link canvas-btn"><img src="imgs/redo.svg" class="canvas-icon">redo</button>
+        <button class="btn btn-link canvas-btn" onclick="sendForward()"><img src="imgs/BringForward.svg" class="canvas-icon">forward</button>
+        <button class="btn btn-link canvas-btn" onclick="sendBackward()"><img src="imgs/SendBackward.svg" class="canvas-icon">backward</button>
+        <button class="btn btn-link canvas-btn" onclick="delSelect()"><img src="imgs/trash.svg" class="canvas-icon">delete</button>
+        <button class="btn btn-link canvas-btn" onclick="clearCanvas()"><img src="imgs/clear.svg" class="canvas-icon">clear</button>
+        <button class="btn btn-link canvas-btn" onclick="exportImg()"><img src="imgs/export.svg" class="canvas-icon">export image</button>
       </div>
+
       <!-- Canvases -->
       <section class="wrapper grid-item">
         <canvas id="canvas-bg">
@@ -467,7 +470,7 @@
                 </button>
               </h5>
             <!-- Sprites -->
-            <div id="vriska" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+            <div id="vriska" class="collapse" data-parent="#trollsTab">
               <div class="card-body">
                 <button class="btnAdd" value="./sprites/trolls/Vriska_8G.png"><img src="sprites/trolls/Vriska_8G.png" class="small-char"></button>
                 <button class="btnAdd" value="./sprites/trolls/Vriska_Dead.gif"><img src="sprites/trolls/Vriska_Dead.gif" class="small-char"></button>
@@ -612,6 +615,7 @@
   <script src="scripts/fontfaceobserver.js"></script>
   <script src="scripts/canvas.js"></script>
   <script src="scripts/undo-redo.js"></script>
+  <script src="scripts/uppercanvas.js"></script>
   <script src="scripts/canvaspan.js"></script>
   <script src="scripts/canvastext.js"></script>
   <script src="scripts/export.js"></script>
