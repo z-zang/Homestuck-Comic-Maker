@@ -4,18 +4,18 @@ A comic panel maker using HTML5 canvas and image manipulation, featuring images 
 
 Layout
 ------
-- Navbar: links to About, Instructions, Contact, and to code On github/Glitch
+- Navbar: links to About, Instructions, Contact, Credit, and Github
 - Canvas: two, one layer for sprites and another for the background images
+- Canvas buttons: options to edit the canvas and add text
 - Sprite Menu: is a tabbed box, with each tab corresponding to a category of sprites. Furthermore, each tab has dropdowns grouping each characters' sprites together
 
 Current Functionality
 ------
 - Navbar: Each link provides a relevant popup or opens in an external window.
 - Canvas: Using Fabric.js, can resize, rotate, and flip added images.
-- Canvas buttons: Option to delete selected sprites, undo/redo actions, and clear canvas.
+- Canvas buttons: Option to flip/delete selected sprites, undo/redo actions, and clear canvas.
 - Canvas controls: Pan and resize for background image, as well as adding custom text.
 - Sprite Menu: Add character/object images by clicking on button of the sprite. Set background by clicking on BG button, or upload custom image file.
-- Popups: Will show instructions on first visit, and will show a warning on mobile.
 
 To do:
 ------

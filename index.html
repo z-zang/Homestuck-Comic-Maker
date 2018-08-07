@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-122487492-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-122487492-1');
+  </script>
+
   <!-- Required -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -16,10 +26,14 @@
   <link rel="stylesheet" href="css/menu.css" type="text/css">
   <link rel="stylesheet" href="css/spectrum.css" type="text/css">
   <link rel="stylesheet" href="css/popup.css" type="text/css">
+  <link rel="stylesheet" href="css/mobile.css" type="text/css">
   <link rel="stylesheet" href="css/mediaquery.css" type="text/css">
 
   <!-- includehtml & font loader-->
   <script src="scripts/includeHTML.js" async></script>
+
+  <!-- Google analytics -->
+  <!-- Global site tag (gtag.js) - Google Analytics -->
 </head>
 
 <body>
@@ -32,9 +46,6 @@
   <!-- INCLUDE navbar-->
   <nav id="navbar" class="grid-item navbar-dark navbar navbar-expand-lg" w3-include-html="components/navbar.html">
   </nav>
-  <!-- <nav class=" navbar-dark navbar navbar-expand-lg" w3-include-html="components/navbar2.html">
-  </nav> -->
-
 
 <!-- Beginning of grid layout; 2 x 1-->
   <div class="grid-container" id="container">
@@ -47,9 +58,11 @@
         <button id="redo" class="btn btn-link canvas-btn"><img src="imgs/redo.svg" class="canvas-icon">redo</button>
         <button class="btn btn-link canvas-btn" onclick="sendForward()"><img src="imgs/BringForward.svg" class="canvas-icon">forward</button>
         <button class="btn btn-link canvas-btn" onclick="sendBackward()"><img src="imgs/SendBackward.svg" class="canvas-icon">backward</button>
+        <button class="btn btn-link canvas-btn" onclick="flipX()"><img src="imgs/flipX.svg" class="canvas-icon">flip</button>
+        <button class="btn btn-link canvas-btn" onclick="flipY()"><img src="imgs/flipY.svg" class="canvas-icon">flip</button>
         <button class="btn btn-link canvas-btn" onclick="delSelect()"><img src="imgs/trash.svg" class="canvas-icon">delete</button>
         <button class="btn btn-link canvas-btn" onclick="clearCanvas()"><img src="imgs/clear.svg" class="canvas-icon">clear</button>
-        <button class="btn btn-link canvas-btn" onclick="exportImg()"><img src="imgs/export.svg" class="canvas-icon">export image</button>
+        <!-- <button class="btn btn-link canvas-btn disabled" onclick="exportImg()"><img src="imgs/export.svg" class="canvas-icon">export image</button> -->
       </div>
 
       <!-- Canvases -->
@@ -101,7 +114,7 @@
             <!-- JohnEgbert dropdown -->
             <div class="card top-card">
                 <h5 class="mb-0">
-                  <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="color: #0715cd">
                     John Egbert
                   </button>
                 </h5>
@@ -129,7 +142,7 @@
             <!-- Rose dropdown -->
             <div class="card">
                 <h5 class="mb-0">
-                  <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseThree">
+                  <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseThree" style="color: #b536da">
                     Rose Lalonde
                   </button>
                 </h5>
@@ -155,7 +168,7 @@
             <div class="card">
 
                 <h5 class="mb-0">
-                  <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseTwo">
+                  <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseTwo" style="color: #e00707">
                     Dave Strider
                   </button>
                 </h5>
@@ -183,7 +196,7 @@
             <!-- Jade dropdown -->
             <div class="card">
                 <h5 class="mb-0">
-                  <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                  <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour" style="color: #4ac925">
                     Jade Harley
                   </button>
                 </h5>
@@ -210,7 +223,7 @@
             <!-- Jane dropdown -->
             <div class="card">
                 <h5 class="mb-0">
-                  <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                  <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive" style="color: #00D5F2">
                     Jane Crocker
                   </button>
                 </h5>
@@ -234,7 +247,7 @@
             <!-- Jake dropdown -->
             <div class="card">
                 <h5 class="mb-0">
-                  <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                  <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix" style="color: #1f9400">
                     Jake English
                   </button>
                 </h5>
@@ -257,7 +270,7 @@
             <!-- Roxy dropdown -->
             <div class="card">
                 <h5 class="mb-0">
-                  <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                  <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven" style="color: #ff6ff2">
                     Roxy Lalonde
                   </button>
                 </h5>
@@ -279,7 +292,7 @@
             <!-- Dirk dropdown -->
             <div class="card">
                 <h5 class="mb-0">
-                  <button class="btn btn-link" data-toggle="collapse" data-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                  <button class="btn btn-link" data-toggle="collapse" data-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight" style="color: #f2a400">
                     Dirk Strider
                   </button>
                 </h5>

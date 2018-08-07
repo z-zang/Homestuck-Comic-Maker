@@ -31,7 +31,6 @@ function closeModal() {
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
   if (event.target == modal) {
-    checkInstruct();
     console.log('checked')
     modal.style.display = "none";
   }
@@ -45,19 +44,20 @@ if ($(window).width() < 680) { // if smaller than 680px
   if (mobileCookie != 'true') {
     $('#mobile-popup').css("display", "block");
   }
-} else { // if bigger than 680px
-  getCookies();
-  if (instructCookie != 'true') {
-    $('#modal-popup').css("display", "block");
-    document.getElementById('instructHide').style.display = "block";
-  }
 }
 
+// REMOVED INSTRUCT POPUP
+
+// else { // if bigger than 680px
+//   getCookies();
+//   if (instructCookie != 'true') {
+//     $('#modal-popup').css("display", "none"); // changed to none
+//     document.getElementById('instructHide').style.display = "block";
+//   }
+// }
+
 // if mobile is open
-function toModal() {
+function closeMobile() {
   checkCheckbox();
   $('#mobile-popup').css("display", "none");
-  if (instructCookie != 'true') {
-    $('#modal-popup').css("display", "block");
-  }
 }

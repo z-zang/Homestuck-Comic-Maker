@@ -24,6 +24,16 @@
 }
 
 @font-face {
+  font-family: "Rapscallion";
+  src: url('../fonts/RAPSCALL.TTF');
+}
+
+@font-face {
+  font-family: "Carima";
+  src: url('../fonts/Carima.ttf');
+}
+
+@font-face {
   font-family: "John handwriting";
   src: url('../fonts/John.ttf');
 }

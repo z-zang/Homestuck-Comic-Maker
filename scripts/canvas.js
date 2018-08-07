@@ -51,7 +51,21 @@ function sendForward() {
   c.bringForward(selectedObject);
 }
 
-var sendBackward = function() {
+function sendBackward() {
   var selectedObject = c.getActiveObject();
   c.sendBackwards(selectedObject);
+}
+
+// flip x
+function flipX() {
+  var selectedObject = c.getActiveObject();
+  selectedObject.flipX == false ? selectedObject.flipX = true : selectedObject.flipX = false
+  c.renderAll()
+}
+
+// flip y
+function flipY() {
+  var selectedObject = c.getActiveObject();
+  selectedObject.flipY == false ? selectedObject.flipY = true : selectedObject.flipY = false
+  c.renderAll()
 }

@@ -1,10 +1,12 @@
 // first thing to check: checkCookies
 var mobileCookie;
-var instructCookie;
 
-if (checkInstruct = true) {
-  $('#instructHide').css('display', 'none');
-}
+// REMOVED INSTRUCT POPUP
+// var instructCookie;
+
+// if (checkInstruct = true) {
+//   $('#instructHide').css('display', 'none');
+// }
 
 function getCookie(cname) {
   var name = cname + "=";
@@ -20,9 +22,10 @@ function getCookie(cname) {
 
 function getCookies() {
     mobileCookie = getCookie("hideMobile");
-    console.log(mobileCookie);
-    instructCookie = getCookie("hideInstruct");
-    console.log(instructCookie);
+
+    // REMOVED INSTRUCT POPUP
+    // instructCookie = getCookie("hideInstruct");
+    // console.log(instructCookie);
 }
 
 getCookies();
@@ -34,9 +37,10 @@ var checkCheckbox = function checkCheckbox() {
   }
 }
 
-var checkInstruct = function checkInstruct() {
-  if (document.getElementById("instructCookie").checked == true){
-    document.cookie = "hideInstruct=true";
-    return true;
-  }
-}
+// REMOVED INSTRUCT POPUP
+// var checkInstruct = function checkInstruct() {
+//   if (document.getElementById("instructCookie").checked == true){
+//     document.cookie = "hideInstruct=true";
+//     return true;
+//   }
+// }

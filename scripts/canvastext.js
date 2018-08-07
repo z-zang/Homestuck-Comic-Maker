@@ -7,7 +7,7 @@ $('#myTooltip').tooltip();
 
 //get text from input
 var inputText = document.getElementById('textbox').value
-var fonts = ["Courier New Bold", "Comic Sans MS", "TrollType", "TrollType V2", "Typostuck", "John handwriting", "Rose handwriting", "Dave handwriting", "Jade handwriting", "Dirk handwriting", "Jake handwriting"];
+var fonts = ["Courier New Bold", "Comic Sans MS", "TrollType", "TrollType V2", "Typostuck", "Rapscallion", "Carima", "John handwriting", "Rose handwriting", "Dave handwriting", "Jade handwriting", "Dirk handwriting", "Jake handwriting"];
 var font = fonts[0];
 loadFont(font);
 // "GhostKid"
