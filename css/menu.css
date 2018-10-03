@@ -18,6 +18,14 @@ menu{
   grid-template-columns: repeat(5, 1fr);
 }
 
+/* troll columns */
+.left-col{
+  padding-left: 0px;
+}
+.right-col{
+  padding-right: 0px;
+}
+
 /* buttons inside menu */
 menu > button{
   margin-right: 2px;
