@@ -43,4 +43,13 @@
   .grid-container{
     padding-top: 60px;
   }
+  .right-col{
+    padding-right: 0px;
+  }
+}
+
+@media only screen and (max-width: 769px) {
+  .row-edit{
+    margin: 0px;
+  }
 }
