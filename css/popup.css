@@ -19,7 +19,7 @@
   border: 1px solid darkgray;
   width: fit-content;
   height: fit-content;
-  box-shadow: 0px 0px 10px 1px #5E8A51;
+  box-shadow: 0px 0px 10px 1px mediumspringgreen;
   /* vertical centering */
   top: 50%;
   transform: translateY(-50%);
@@ -54,6 +54,12 @@
 .btn-contact{
   height: 30px;
   padding: 0px 8px;
+  color: white;
+}
+
+.btn-contact:hover{
+  color: azure;
+  box-shadow: 0px 0px 7px 2px mediumspringgreen
 }
 
 .twitter{
