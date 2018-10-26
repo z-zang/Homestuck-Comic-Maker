@@ -42,10 +42,6 @@
   text-align: left;
 }
 /* individual carousel card stylings */
-.green{
-  color: #73E94E;
-  text-decoration: underline;
-}
 
 .green:hover{
   color: #C9E996;
@@ -86,4 +82,12 @@
   color: black;
   text-decoration: none;
   cursor: pointer;
+}
+
+li > a{
+  color: mediumspringgreen;
+}
+
+li > a:hover{
+  color: aquamarine;
 }
