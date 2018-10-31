@@ -1,8 +1,9 @@
 // Exports images with toDataUrl
 
-// Fix to include background image, then merge two pictures together
+//Fix to include background image, then merge two pictures together
 function exportImg() {
   var img = c.toDataURL("image/png");
+  img.crossOrigin = "Anonymous";
   var tab = window.open('about:blank','image from canvas');
   tab.document.write(
     '<div id="canvas-bg">'
@@ -13,7 +14,12 @@ function exportImg() {
 }
 
 function open2() {
-  var img2 = bgCanvas.toDataURL("image/png");
+  // var img2 = bgCanvas.toDataURL("image/png");
+  var img2 = new Image(650, 450)
+  img2.src = 'sprites/background/BecLab.jpg'
+  img2.crossOrigin = "Anonymous";
+
+  
   var tab2 = window.open('about:blank2','image from canvas2');
   tab2.document.write(
     '<div id="canvas-bg">'
@@ -25,7 +31,7 @@ function open2() {
 
 // function exportImg() {
 //   var img = c.toDataURL("image/png");
-//   bgCtx.drawImage(img, 0, 0);
+//   bgCtx.drawImage(img, 0, 0, 650, 450);
 //
 //   var dataURL = bgCtx.toDataURL("image/png");
 //
@@ -35,9 +41,9 @@ function open2() {
 //       +'<img src="'+dataURL+'"/>'
 //       +'</div>'
 //     );
-//
-//   var link = document.createElement('a');
-//   link.download = "hscomic.png";
-//   link.href = bgCtx.toDataURL("image/png").replace("image/png", "image/octet-stream");
-//   link.click();
+
+  // var link = document.createElement('a');
+  // link.download = "hscomic.png";
+  // link.href = bgCtx.toDataURL("image/png").replace("image/png", "image/octet-stream");
+  // link.click();
 // }

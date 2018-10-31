@@ -2,12 +2,13 @@
 .canvas-nav{
   margin-top: 5px;
   display: grid;
-  grid-template-columns: repeat(8, auto) ;
+  grid-template-columns: repeat(9, auto) ;
   max-width: 650px;
 }
 
 .canvas-btn{
   padding: 4px 0px;
+  font-size: 14px;
 }
 
 .canvas-icon{
