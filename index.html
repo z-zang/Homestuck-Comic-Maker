@@ -40,8 +40,6 @@
   <!-- Popups -->
   <div id="modal-popup" w3-include-html="components/modal.html">
   </div>
-  <div id="mobile-popup" w3-include-html="components/mobile.html">
-  </div>
 
   <!-- INCLUDE navbar-->
   <nav id="navbar" class="grid-item navbar-dark navbar navbar-expand-lg" w3-include-html="components/navbar.html">
@@ -57,12 +55,12 @@
         <button id="undo" class="btn btn-link canvas-btn"><img src="imgs/undo.svg" class="canvas-icon">undo</button>
         <button id="redo" class="btn btn-link canvas-btn"><img src="imgs/redo.svg" class="canvas-icon">redo</button>
         <button class="btn btn-link canvas-btn" onclick="sendForward()"><img src="imgs/BringForward.svg" class="canvas-icon">forward</button>
-        <button class="btn btn-link canvas-btn" onclick="sendBackward()"><img src="imgs/SendBackward.svg" class="canvas-icon">backward</button>
+        <button class="btn btn-link canvas-btn" onclick="sendBackward()"><img src="imgs/SendBackward.svg" class="canvas-icon">back</button>
         <button class="btn btn-link canvas-btn" onclick="flipX()"><img src="imgs/flipX.svg" class="canvas-icon">flip</button>
         <button class="btn btn-link canvas-btn" onclick="flipY()"><img src="imgs/flipY.svg" class="canvas-icon">flip</button>
         <button class="btn btn-link canvas-btn" onclick="delSelect()"><img src="imgs/trash.svg" class="canvas-icon">delete</button>
         <button class="btn btn-link canvas-btn" onclick="clearCanvas()"><img src="imgs/clear.svg" class="canvas-icon">clear</button>
-        <!-- <button class="btn btn-link canvas-btn disabled" onclick="exportImg()"><img src="imgs/export.svg" class="canvas-icon">export image</button> -->
+        <button class="btn btn-link canvas-btn" onclick="exportImg()"><img src="imgs/export.svg" class="canvas-icon">export</button>
       </div>
 
       <!-- Canvases -->
